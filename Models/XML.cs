@@ -9,7 +9,6 @@ public class XML : IWeatherReader
             var serializer = new XmlSerializer(typeof(Data));
             StringReader reader = new StringReader(input);
             Data? data = (Data?)serializer.Deserialize(reader);
-            reader.Close();
 
             if (data == null || string.IsNullOrWhiteSpace(data.Location))
                 throw new Exception(Messages.InvalidXmlMessage);
