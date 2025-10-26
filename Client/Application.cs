@@ -1,5 +1,4 @@
 using System.Text.Json;
-
 public class Application
 {
     public static void Initialize()
@@ -31,9 +30,9 @@ public class Application
 
         var bots = new IBot[]
         {
-            new RainBot(weatherData, botConfig),
-            new SunBot(weatherData, botConfig),
-            new SnowBot(weatherData, botConfig)
+                new RainBot(weatherData, botConfig),
+                new SunBot(weatherData, botConfig),
+                new SnowBot(weatherData, botConfig)
         };
 
         foreach (var bot in bots)
